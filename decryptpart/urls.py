@@ -3,5 +3,5 @@ from . import views
 
 app_name='decryptpart'
 urlpatterns = [
-    path('',views.enterform,name="decryptpart"),
+    path('',views.enterform,name="decrypthome"),
 ]
