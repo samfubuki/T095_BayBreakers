@@ -67,15 +67,12 @@
 }
 </style>
 <body>
-<form class="box" action="" method="post">
+<form action = "{% url 'decryptpart:outputform' %}" class="box" method="POST">
+{% csrf_token %}
 <h1>DECRYPT MESSAGE</h1>
-<input type="text" name="" placeholder="Key">
-<input type="text" name="" placeholder="Message">
+<input type="text" name="key" placeholder="Key">
+<input type="text" name="message" placeholder="Message">
 <input type="submit" name="" value="submit">
 </form>
-
-
-
-
 </body>
 </html>
