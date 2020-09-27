@@ -107,7 +107,7 @@ def main():
     mini = 10000
     ans1 = " "
     for i in range(11):
-        if m[str(arr[i])]:
+        if m.get(arr[i]) != None:
             continue
 
         sum = 0
