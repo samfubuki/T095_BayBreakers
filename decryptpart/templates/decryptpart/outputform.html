@@ -1,2 +1,68 @@
-<h2>Test{{output}}</h2>
-<h2>{{message}}</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animation Text</title>
+  </head>
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    }
+    body{
+    background: #000;
+    }
+    .container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    }
+    .container span{
+    text-transform: uppercase;
+    display: block;
+    }
+    .text1{
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 3s 1;
+    }
+    .text2{
+    font-size: 25px;
+    color: #6ab04c;
+    }
+
+    @keyframes text {
+    0%{
+        color: black;
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+    }
+  </style>  
+  <body>
+
+<div class="container">
+  <span class="text1">{{output}}</span>
+  <span class="text2">{{message}}</span>
+</div>
+
+
+
+  </body>
+</html>

@@ -13,12 +13,12 @@ def login(request):
     if request.method=='POST':
         #check if a user exists
         #check if password exists
-        var uname=request.POST['username']
-        var pwd = request.POST['password']
-        print(uname)
-        if uname=="General@123" and  pwd=="INDIA":
+        username=request.POST['username']
+        password = request.POST['password']
+        print(username)
+        if username=="General@123" and  password=="INDIA":
            # messages.success(request, "You have been able to login successfully")
-            return render(request, "decrypt/enterform.html")
+            return render(request, "decryptpart/enterform.html")
            
         else:
             messages.error(request,'username or password not correct')
