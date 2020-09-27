@@ -27,7 +27,7 @@
     }
     .text1{
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
@@ -39,7 +39,20 @@
     font-size: 25px;
     color: #6ab04c;
     }
-
+    .text3{
+     color: white;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 3s 1;
+    }
+    .text4{
+      font-size: 25px;
+      color: #6ab04c;  
+    }
     @keyframes text {
     0%{
         color: black;
@@ -58,8 +71,11 @@
   <body>
 
 <div class="container">
-  <span class="text1">{{output}}</span>
+  <span class="text1">THE MESSAGE IS:</span>
   <span class="text2">{{message}}</span>
+  <span class="text3">THE ENEMY LOCATIONS ARE:</span>
+  <span class="text4">{{output}}</span>
+  <span 
 </div>
 
 

@@ -1,7 +1,14 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
+from queue import PriorityQueue
+mp = {}
+um = {}
+arr = []
+v = []
 
 # Create your views here.
+
+
 
 def enterform(request):
     return render(request, 'decryptpart/enterform.html')
@@ -13,16 +20,17 @@ def login(request):
     if request.method=='POST':
         #check if a user exists
         #check if password exists
-        username=request.POST['username']
-        password = request.POST['password']
+        username=request.POST.get['username']
+        password = request.POST.get['password']
         print(username)
+        print(password)
         if username=="General@123" and  password=="INDIA":
            # messages.success(request, "You have been able to login successfully")
             return render(request, "decryptpart/enterform.html")
            
         else:
             messages.error(request,'username or password not correct')
-            return redirect(request,'decryptpart/login.html')   
+            return redirect("loginpage")   
            
 
 
