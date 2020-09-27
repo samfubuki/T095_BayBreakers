@@ -75,7 +75,11 @@
   <span class="text2">{{message}}</span>
   <span class="text3">THE ENEMY LOCATIONS ARE:</span>
   <span class="text4">{{output}}</span>
-  <span 
+  <span class="text1">THE POSSIBLE LOCATIONS FOR OUR ARMY</span>
+  {% for i in dijkstra %}
+  <span class="text2">{{i}} La</span>
+  {% endfor %}
+  
 </div>
 
 
