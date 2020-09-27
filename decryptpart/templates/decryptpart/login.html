@@ -99,14 +99,15 @@ input[type="submit"]:hover{
 <body>
  <div class="center">
   <h1>Login</h1>
-  <form method="POST">
+  <form action = "{% url 'decryptpart:enterform' %}" method="POST">
+   {% csrf_token %}
     <div class="txt_field">
-      <input type="text" name="" placeholder="" required>
+      <input type="text" name="username" placeholder="" required>
       <span></span> 
       <label>Username</label>
     </div>
     <div class="txt_field">
-      <input type="password" name="" placeholder="" required>
+      <input type="password" name="password" placeholder="" required>
       <span></span>
       <label>Password</label>
     </div>
